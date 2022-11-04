@@ -1,5 +1,6 @@
 #pragma once
 #include "Average.h"
+#include <vector>
 
 class Std : public Average {
 public:
@@ -8,7 +9,7 @@ public:
     double eval() const override;
     const char * name() const override;
 private:
-    double m_std, m_std_sum;
-    int m_count;
+    double m_std;
+    std::vector<double> values;
 };
 
